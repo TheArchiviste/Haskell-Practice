@@ -3,7 +3,6 @@
 -- SIMP. Assume the input of your program is a syntax tree corresponding to an integer expression,
 -- and execute it using the transition rules of the abstract machine:
 
-
 -- Labels (variable names) are just strings:
 type Label = String
 
