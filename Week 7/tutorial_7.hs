@@ -1,5 +1,6 @@
 -- Exercise 1
 -- Compute the square of a number using a function square.
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 square :: Integer -> Integer
 square x = x * x
 
@@ -46,4 +47,29 @@ fact2 0 = 1
 fact2 n = n * fact2 (n - 1)
 
 -- Exercise 9
--- Define the factorial function using
+-- Define a function using local definitions.
+fun x = a + 1
+    where a = x / 2
+
+fun1 x =
+    let a = x / 2 in a + 1
+
+fun2 x = sqr (successor x)
+    where sqr z = x * x; successor x = x + 1
+
+magnitude a b = sqrt (asq + bsq)
+    where asq = a * a; bsq = b * b
+
+-- Exercise 10
+-- Define a couple of function then use function composition to combine them.
+len :: [Int] -> Int
+len [] = 0
+len (x:xs) = 1 + len xs
+
+double :: Int -> Int
+double x = 2 * x
+
+sample :: [Int] -> Int
+sample = double . len 
+
+

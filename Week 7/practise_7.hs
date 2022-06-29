@@ -19,4 +19,7 @@ fib3 1 = 1
 fib3 2 = 1
 fib3 n = fib3(n - 2) + fib3(n - 1)
 
--- Using 
+-- Another solution to obtaining the fib function's values:
+fib4 :: Int -> Int
+fib4 n = xs !! (n - 1)
+    where xs = 1 : 1 : zipWith (+) xs (tail xs)
