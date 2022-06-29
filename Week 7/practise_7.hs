@@ -1,5 +1,5 @@
 -- Exercise 1
--- Write 3 definition for a function called fib n evaluating the
+-- Write 3 definitions for a function called fib n evaluating the
 -- n-th value of the Fibonnaci sequence.
 
 -- Using conditionals:

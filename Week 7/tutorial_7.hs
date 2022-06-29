@@ -1,6 +1,5 @@
 -- Exercise 1
 -- Compute the square of a number using a function square.
-{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 square :: Integer -> Integer
 square x = x * x
 
@@ -61,7 +60,7 @@ magnitude a b = sqrt (asq + bsq)
     where asq = a * a; bsq = b * b
 
 -- Exercise 10
--- Define a couple of function then use function composition to combine them.
+-- Define a couple of functions then use function composition to combine them.
 len :: [Int] -> Int
 len [] = 0
 len (x:xs) = 1 + len xs
