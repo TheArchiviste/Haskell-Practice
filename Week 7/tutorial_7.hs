@@ -71,4 +71,20 @@ double x = 2 * x
 sample :: [Int] -> Int
 sample = double . len 
 
+-- Exercise 10
+-- Apply the concept of partial application using Haskell.
+plus :: Int -> Int -> Int
+plus x y = x + y
+
+parApp = plus 3 . double
+
+-- Exercise 11
+-- Curried and Uncurried functions.
+plusTuple :: (Int, Int) -> Int
+plusTuple (x, y) = x + y
+
+plus1 = curry plusTuple
+
+plusTuple1 = uncurry plus
+
 
