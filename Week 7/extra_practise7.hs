@@ -59,6 +59,7 @@ absVal x
 
 -- Exercise 7
 -- Define a recusive function fib to compute the Fibonnaci numbers.
+fib :: Int -> Int
 fib n 
     | n == 0 = 1 
     | n == 1 = 1
@@ -70,3 +71,7 @@ fib n
 -- definition of some other function, where base is the value to be returned for the base case of the
 -- inductive definition of the function; comb is a binary function to apply to an argument greater
 -- than the value of the base case; and arg is the value to be used in the function’s recursive call.
+induction base comb n
+    | n == 0 = base
+    | n > 0 = comb n (induction base comb n-1)
+    | otherwise = error "Something went wrong!"
