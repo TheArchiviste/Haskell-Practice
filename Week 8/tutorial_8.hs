@@ -9,7 +9,7 @@ mod' x y
     | x - y < 0 = x
     | otherwise = mod' (x - y) y
 
--- Exercise 2
+-- Exercise 3
 -- Define a function even' that checks whether a number is 
 -- indeed even.
 even' :: Int -> Bool
@@ -17,7 +17,7 @@ even' x
     | mod' x 2 == 0 = True
     | otherwise = False
 
--- Exercise 3
+-- Exercise 4
 -- Define a function that computes the collatz conjecture. 
 collatz x
     | x == 1 = 1
