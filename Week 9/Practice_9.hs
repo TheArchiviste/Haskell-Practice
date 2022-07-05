@@ -60,3 +60,13 @@ gFact n = genLoop 1 n 1 (*) id
 
 gSum :: Int -> Int
 gSum n = genLoop 0 n 0 (+) id
+
+-- Exercise 7
+-- Write a function that doubles each element of a list and creates a
+-- new list with the new values.
+double :: Int -> Int
+double x = 2 * x
+
+map1 :: (Int -> Int) -> [Int] -> [Int]
+map1 double [] = []
+map1 double (x:xs) = double(x) : map1 double (xs)
