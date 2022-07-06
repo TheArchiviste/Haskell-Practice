@@ -70,3 +70,16 @@ double x = 2 * x
 map1 :: (Int -> Int) -> [Int] -> [Int]
 map1 double [] = []
 map1 double (x:xs) = double(x) : map1 double (xs)
+
+-- Exercise 8
+-- Write a function iterate that takes a natural number n, a function f 
+-- ad an element x, and applies n times f on x.
+iterate1 :: Int -> (Int -> Int) -> Int -> Int
+iterate1 0 f x = x
+iterate1 n f x = f (iterate1 (n-1) f x)
+
+iterate2 :: Integer -> (a -> a) -> a -> a
+iterate2 n f x
+    | n < 0 = error "Negative arguement!"
+    | n == 0 = x
+    | otherwise = f (iterate2 (n-1) f x)
